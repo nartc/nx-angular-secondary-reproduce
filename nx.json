@@ -26,17 +26,7 @@
       }
     ]
   },
-  "projects": {
-    "my-lib": {
-      "tags": []
-    },
-    "my-lib-secondary-one": {
-      "tags": []
-    },
-    "my-lib-secondary-two": {
-      "tags": []
-    }
-  },
+  "projects": {},
   "workspaceLayout": {
     "appsDir": "packages",
     "libsDir": "packages"

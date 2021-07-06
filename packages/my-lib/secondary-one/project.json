@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "packages/my-lib/secondary-one",
+  "sourceRoot": "packages/my-lib/secondary-one/src",
+  "prefix": "test-secondary",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/packages/my-lib/secondary-one"],
+      "options": {
+        "project": "packages/my-lib/secondary-one/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/my-lib/secondary-one/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/my-lib/secondary-one/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/my-lib/secondary-one"],
+      "options": {
+        "jestConfig": "packages/my-lib/secondary-one/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/my-lib/secondary-one/src/**/*.ts",
+          "packages/my-lib/secondary-one/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
