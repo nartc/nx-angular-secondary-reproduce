@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my/my-lib": ["packages/my-lib/src/index.ts"],
+      "@my/my-lib/secondary-one": [
+        "packages/my-lib/secondary-one/src/index.ts"
+      ],
+      "@my/my-lib/secondary-two": ["packages/my-lib/secondary-two/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
